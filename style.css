@@ -1,0 +1,642 @@
+:root {
+  --main-color: #0e369f;
+  --accent-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 16px/20px "Poppins", sans-serif;
+  background-color: #f2f2f2;
+  overflow-x: hidden;
+}
+
+/* ----------------------------------Navbar style-------------------------------------- */
+
+.navbar {
+  background-color: var(--main-color);
+}
+
+/* title style */
+.section-title > h2 {
+  margin-top: 90px;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+/* ---------------------------------jumbotron style---------------------------------- */
+
+.jumbotron {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(assets/img/AJcomp.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+
+.jumbotron::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.tagline {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+}
+
+.tagline > h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  font-size: 2.5em;
+}
+.tagline > p {
+  padding: 0 81px;
+  font-weight: 300;
+}
+
+.cta-animate {
+  position: relative;
+  z-index: 1;
+}
+
+.cta {
+  padding: 18px 42px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  line-height: 24px;
+  transition: all 0.6s ease;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.cta a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.cta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: transparent;
+  border: 3px solid var(--main-color);
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 100%;
+  background-color: var(--main-color);
+  z-index: -1;
+  transition: 0.6s ease;
+}
+
+.cta:hover::before {
+  width: 100%;
+}
+
+/* About style */
+
+.about {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.about h2 {
+  margin-top: 150px;
+}
+
+.content-about {
+  height: 100%;
+}
+
+.card-about {
+  height: 340px;
+  width: 280px;
+  box-sizing: border-box;
+  color: var(--main-color);
+}
+
+.content-about .card-about-satu {
+  order: 1;
+}
+.content-about .card-about-dua {
+  order: 2;
+}
+.content-about .card-about-tiga {
+  order: 3;
+}
+
+.content-about {
+  margin-top: 50px;
+}
+
+.circle-bg {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card-about h4 {
+  font-weight: 600;
+}
+
+.icon-kualitas {
+  width: 38px;
+}
+.icon-saran {
+  position: absolute;
+  left: 32px;
+}
+.icon-cepat {
+  width: 52px;
+  position: absolute;
+  left: 27px;
+}
+
+/* Produk Style */
+
+.produk h2 {
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.card-produk {
+  height: 360px;
+  width: 271px;
+  position: relative;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.image__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.img__overlay {
+  padding: 30px 20px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-sizing: border-box;
+}
+
+.img__overlay--blur {
+  backdrop-filter: blur(5px);
+}
+
+.img__overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.3s;
+}
+
+.img__overlay:hover {
+  opacity: 1;
+}
+
+.img__overlay:hover > * {
+  transform: translateY(0);
+}
+
+.produk-title {
+  font-size: 2.1em;
+}
+
+.img__overlay p {
+  font-weight: 300;
+}
+
+/* Layanan Style */
+
+.layanan {
+  margin-top: 120px;
+}
+
+.layanan h2 {
+  margin-top: 150px;
+}
+
+.card-wrap {
+  margin-top: 80px;
+}
+
+.card-animate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layanan .card-layanan {
+  display: flex;
+  height: 306px;
+  width: 280px;
+  border: 6px solid var(--main-color);
+  border-radius: 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  transition: ease-in-out 0.3s;
+}
+
+.layanan .card-layanan:hover {
+  background-color: var(--main-color);
+  color: var(--accent-color);
+}
+
+.layanan .card-layanan:hover .circle-border {
+  border: 5px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.circle-border {
+  display: flex;
+  width: 120px;
+  height: 120px;
+  border: 5px solid var(--main-color);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: ease-in-out 0.3s;
+  color: #0e369f;
+}
+
+.card-layanan > h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card-layanan .icon-truck {
+  font-size: 70px;
+}
+.card-layanan .icon-hammer {
+  font-size: 70px;
+}
+
+.card-layanan .icon-telp {
+  font-size: 60px;
+}
+.card-layanan .icon-meter {
+  position: absolute;
+  font-size: 75px;
+  top: 14px;
+  right: 14px;
+}
+
+/* Kontak style */
+
+.kontak {
+  margin-top: 150px;
+}
+
+.kontak h2 {
+  margin-bottom: 40px;
+}
+
+.kontak-element-wrap {
+  margin-bottom: 80px;
+}
+
+.kontak-element {
+  height: 456px;
+  width: 526px;
+  border-radius: 12px;
+}
+
+.kontak-hubungi {
+  padding: 45px 70px;
+  background-color: var(--main-color);
+  color: var(--accent-color);
+}
+.kontak-hubungi h3 {
+  font-size: 2em;
+}
+.kontak-hubungi p {
+  font-weight: 300;
+  padding-right: 50px;
+  margin-top: 15px;
+  margin-bottom: 28px;
+}
+
+.kontak-form {
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px 0.2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 4px 0.2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 4px 0.2px rgba(0, 0, 0, 0.25);
+}
+
+.kontak-info {
+  box-sizing: border-box;
+}
+
+.kontak-info .icon-desc h6 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.kontak-info .icon-desc p {
+  margin: 0;
+  font-weight: 300;
+}
+
+.kontak-form {
+  position: relative;
+  padding: 30px 50px;
+  overflow-y: hidden;
+}
+
+.kontak-form h3 {
+  margin-bottom: 36px;
+}
+
+.kontak-form .form-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.kontak-form .form-group input,
+.kontak-form .form-group textarea {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid rgb(204, 204, 204);
+  display: block;
+  margin-bottom: 40px;
+}
+
+.form-group textarea {
+  max-height: 32px;
+}
+
+.kontak-form .form-group input,
+.kontak-form .form-group textarea:focus {
+  outline: none;
+}
+
+.kontak-form .form-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: rgb(99, 98, 98);
+}
+
+.kontak-form .form-group input:focus + label,
+.kontak-form .form-group input:valid + label,
+.kontak-form .form-group textarea:focus + label,
+.kontak-form .form-group textarea:valid + label {
+  top: -20px;
+  left: 0;
+  font-size: smaller;
+  color: var(--main-color);
+}
+
+.kontak-form .btn-kirim {
+  padding: 6px 12px;
+  background-color: var(--main-color);
+  border: 3px solid var(--main-color);
+  color: var(--accent-color);
+  border-radius: 5px;
+  transition: 0.3s;
+  position: absolute;
+  bottom: 25px;
+}
+
+.kontak-form .btn-kirim:hover {
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+.kontak-form .btn-loading {
+  padding: 6px 12px;
+  background-color: var(--main-color);
+  border: 3px solid var(--main-color);
+  color: var(--accent-color);
+  border-radius: 5px;
+  transition: 0.3s;
+  position: absolute;
+  bottom: 25px;
+}
+
+.form-field-wrap {
+  width: 100%;
+  height: 70%;
+  overflow-y: hidden;
+}
+
+/* ---------------------------------footer style--------------------------------------- */
+
+.footer {
+  background-color: var(--main-color);
+  position: absolute;
+  top: -55px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  color: var(--accent-color);
+}
+.footer h5 {
+  font-size: 1em;
+  font-weight: 600;
+}
+.footer a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 300;
+}
+
+.footer a:hover {
+  color: rgb(255, 251, 0);
+}
+
+/* ============================ Responsive breakpoints ================================ */
+
+@media screen and (max-width: 576px) {
+  /* jumbotron style */
+
+  .tagline {
+    margin-bottom: 120px;
+  }
+
+  .tagline > h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .tagline > p {
+    font-size: smaller;
+    padding: 0 32px;
+  }
+
+  .cta {
+    width: 75%;
+  }
+
+  /* produk style */
+  .produk {
+    margin-top: 500px;
+  }
+
+  /* layanan style */
+  .layanan .card-layanan {
+    margin-bottom: 16px;
+  }
+
+  .card-animate {
+    padding: 0 42px;
+  }
+
+  /* kontak style */
+  .kontak-hubungi h3 {
+    font-size: 28px;
+  }
+  .kontak-hubungi p {
+    font-size: 14px;
+  }
+  .kontak-element {
+    padding: 32px 24px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  /* About style */
+  .content-about .card-about-dua {
+    order: 3;
+  }
+  .content-about .card-about-tiga {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* layanan style */
+  .layanan .card-layanan {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  /* jumbotron style */
+  .tagline {
+    margin-bottom: 70px;
+  }
+
+  /* About style */
+  .card-about {
+    width: 240px;
+    height: 240px;
+  }
+
+  .card-about > p {
+    font-size: smaller;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* layanan style */
+
+  .card-animate {
+    margin: 0 16px;
+  }
+
+  .layanan .card-layanan {
+    height: 267px;
+    margin-bottom: 42px;
+  }
+
+  .circle-border {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-layanan > h4 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .card-layanan > p {
+    font-size: 12px;
+  }
+
+  .card-layanan .icon-truck {
+    font-size: 60px;
+  }
+  .card-layanan .icon-hammer {
+    font-size: 60px;
+  }
+
+  .card-layanan .icon-telp {
+    font-size: 50px;
+  }
+  .card-layanan .icon-meter {
+    font-size: 65px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .card-animate {
+    margin-left: 16px;
+    margin-bottom: 16px;
+  }
+}
